@@ -2,9 +2,13 @@
 
 This app helps to browse and run any sfdx commands with few key entries.
 
+### Installation:
+
+npm i -g dxh
+
 ### Examples:
 
-\$ **dxh a**
+\$ **dxh **
 _? Enter Shortcut or Topic_ **a**
 _SHORTCUT COMMAND DESC  
 all alias:list list username aliases for the Salesforce CLI
