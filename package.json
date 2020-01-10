@@ -1,0 +1,40 @@
+{
+  "name": "dxh",
+  "version": "1.0.1",
+  "description": "SFDX Helper",
+  "main": "index.js",
+  "bin": {
+    "dxh": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nelangovan/dxh.git"
+  },
+  "keywords": [
+    "sfdx",
+    "saleforce",
+    "cli",
+    "commandline",
+    "force.com",
+    "salesforce-dx",
+    "salesforcedx"
+  ],
+  "author": "Elangovan Nainar",
+  "license": "MIT",
+  "dependencies": {
+    "columnify": "^1.5.4",
+    "commander": "^4.1.0",
+    "inquirer": "^7.0.3",
+    "kleur": "^3.0.3",
+    "ora": "^4.0.3",
+    "shelljs": "^0.8.3",
+    "trie-search": "^1.2.11"
+  },
+  "bugs": {
+    "url": "https://github.com/nelangovan/dxh/issues"
+  },
+  "homepage": "https://github.com/nelangovan/dxh#readme"
+}
