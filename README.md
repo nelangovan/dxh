@@ -9,7 +9,8 @@ npm i -g dxh
 ### Examples:
 
 \$ dxh
-? Enter Shortcut or Topic* **a**
+\? Enter Shortcut or Topic\* **a**
+
 SHORTCUT COMMAND DESC  
 all alias:list list username aliases for the Salesforce CLI
 als alias:set set username aliases for the Salesforce CLI
@@ -27,7 +28,7 @@ auli auth:list list auth connection information
 aulo auth:logout log out from authorized orgs  
 aus auth:sfdxurl:store authorize an org using an SFDX auth URL  
 auw auth:web:login authorize an org using the web login flow  
-? Enter Shortcut or Topic* **al**
+? Enter Shortcut or Topic\* **al**
 SHORTCUT COMMAND DESC  
 all alias:list list username aliases for the Salesforce CLI
 als alias:set set username aliases for the Salesforce CLI\_
