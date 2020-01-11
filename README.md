@@ -4,16 +4,21 @@ This app helps to browse and run any sfdx commands with few key entries.
 
 ### Installation:
 
+Still in alpha. Tested only in Linux machine. Assume you have installed salesforce_cli and SFDX already in your system.
+
 npm i -g dxh
 
 ### Examples:
 
 \$ dxh
-\? Enter Shortcut or Topic\* **a**
 
-SHORTCUT COMMAND DESC  
-all alias:list list username aliases for the Salesforce CLI
-als alias:set set username aliases for the Salesforce CLI
+\$ ? Enter Shortcut or Topic **a**
+
+| SHORTCUT |  COMMAND   |                     DESC                     |
+| :------: | :--------: | :------------------------------------------: |
+|   all    | alias:list | list username aliases for the Salesforce CLI |
+
+|als alias:set set username aliases for the Salesforce CLI
 apcc apex:class:create create an Apex class  
 ape apex:execute execute anonymous Apex code  
 aplg apex:log:get fetch the last debug log  
