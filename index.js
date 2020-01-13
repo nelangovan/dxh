@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const trieSearch = require("trie-search");
 const inquirer = require("inquirer");
 const columnify = require("columnify");

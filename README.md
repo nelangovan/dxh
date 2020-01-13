@@ -4,7 +4,7 @@ This app helps to browse and run any sfdx commands with few key entries.
 
 ### Installation:
 
-Still in alpha. Tested only in Linux machine. Assume you have installed salesforce_cli and SFDX already in your system.
+Still in alpha. Tested only in Linux machine. Assumed you have installed salesforce_cli and SFDX already in your system.
 
 npm i -g dxh
 

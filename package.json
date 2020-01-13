@@ -1,6 +1,6 @@
 {
   "name": "dxh",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "SFDX Helper",
   "main": "index.js",
   "bin": {
