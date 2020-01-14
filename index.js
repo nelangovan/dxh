@@ -11,14 +11,18 @@ const sfcommands = require("./conf.js");
 var ts = new trieSearch(["shortcut", "command"]);
 ts.addAll(sfcommands.getAllCmds());
 
-const questions = [
-  {
-    type: "input",
-    name: "cmd",
-    message: "Enter Shortcut or Topic"
-  }
-];
-let finalcmd = "sfdx force:doc:list";
+const questions = {
+  type: "input",
+  name: "cmd",
+  message: "Enter Shortcut or Topic"
+};
+const copt = {
+  type: "input",
+  name: "options",
+  message: bold().blue("Enter your options for " + this.finalcmd)
+};
+
+//let finalcmd = "sfdx force:doc:list";
 function ask() {
   inquirer.prompt(questions).then(answers => {
     let out = ts.get(answers.cmd);
@@ -29,15 +33,7 @@ function ask() {
     } else if (out.length == 1) {
       console.log(out[0].command);
       finalcmd = "sfdx force:" + out[0].command;
-      //let sfcmd = finalcmd + " --help";
       shell.exec(finalcmd + " --help");
-
-      const copt = {
-        type: "input",
-        name: "options",
-        message: bold().blue("Enter your options for " + finalcmd)
-      };
-
       inquirer
         .prompt(copt)
         .then(ans2 => {
