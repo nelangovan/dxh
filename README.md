@@ -12,30 +12,52 @@ npm i -g dxh
 
 \$ dxh
 
-\$ ? Enter Shortcut or Topic **a**
+\$ ? Enter Shortcut or Topic **u**
 
-| SHORTCUT |  COMMAND   |                     DESC                     |
-| :------: | :--------: | :------------------------------------------: |
-|   all    | alias:list | list username aliases for the Salesforce CLI |
+| SHORTCUT |        COMMAND         |                          DESC                          |
+| :------: | :--------------------: | :----------------------------------------------------: |
+|    uc    |      user:create       |            create a user for a scratch org             |
+|    ud    |      user:display      |   displays information about a user of a scratch org   |
+|    ul    |       user:list        |            lists all users of a scratch org            |
+|   upa    |  user:permset:assign   | assign a permission set to one or more users of an org |
+|   upg    | user:password:generate |       generate a password for scratch org users        |
 
-|als alias:set set username aliases for the Salesforce CLI
-apcc apex:class:create create an Apex class  
-ape apex:execute execute anonymous Apex code  
-aplg apex:log:get fetch the last debug log  
-apll apex:log:list list debug logs  
-aplt apex:log:tail start debug logging and display logs  
-aptc apex:trigger:create create an Apex trigger  
-aptre apex:test:report display test results  
-aptru apex:test:run invoke Apex tests  
-aud auth:device:login authorize an org using a device code  
-auj auth:jwt:grant authorize an org using the JWT flow  
-auli auth:list list auth connection information  
-aulo auth:logout log out from authorized orgs  
-aus auth:sfdxurl:store authorize an org using an SFDX auth URL  
-auw auth:web:login authorize an org using the web login flow  
-? Enter Shortcut or Topic\* **al**
+? Enter Shortcut or Topic **ul**
 SHORTCUT COMMAND DESC  
-all alias:list list username aliases for the Salesforce CLI
-als alias:set set username aliases for the Salesforce CLI\_
+ul user:list lists all users of a scratch org
+user:list
+lists all users of a scratch org
+
+USAGE
+\$ sfdx force:user:list [-v <string>][-u <string>] [--apiversion <string>][--json] [--loglevel
+trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]
+
+OPTIONS
+-u, --targetusername=targetusername
+username or alias for the target org; overrides default target org
+
+-v, --targetdevhubusername=targetdevhubusername
+username or alias for the dev hub org; overrides default dev hub org
+
+--apiversion=apiversion
+override the api version used for api requests made by this command
+
+--json
+format output as json
+
+--loglevel=(trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATA
+L)
+[default: warn] logging level for this command invocation
+
+DESCRIPTION
+The original scratch org admin is marked with "(A)"
+Examples:
+$ sfdx force:user:list
+      $ sfdx force:user:list -u me@my.org --json
+\$ sfdx force:user:list --json > tmp/MyUserList.json
+
+? Enter your options for sfdx force:user:list
+
+---
 
 Enter full shortcut takes to help output of that command before proceed to run the command and ask for options
