@@ -13,7 +13,7 @@ let loopMode = false;
 const commander = require("commander");
 const program = new commander.Command();
 program
-  .version("0.1.0")
+  .version("1.1.0")
   .description("sfdx command helper")
   .option("-l, --loop", "Enable loop mode")
   .usage("[options] [shortcuts or topics]")
