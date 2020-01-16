@@ -23,6 +23,7 @@ npm i -g dxh
 |   upg    | user:password:generate |       generate a password for scratch org users        |
 
 ? Enter Shortcut or Topic **ul**
+
 SHORTCUT COMMAND DESC  
 ul user:list lists all users of a scratch org
 user:list

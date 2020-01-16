@@ -13,7 +13,7 @@ let loopMode = false;
 const commander = require("commander");
 const program = new commander.Command();
 program
-  .version("1.1.0")
+  .version("1.1.2")
   .description("sfdx command helper")
   .option("-l, --loop", "Enable loop mode")
   .usage("[options] [shortcuts or topics]")
@@ -78,7 +78,7 @@ const runCmd = async finalcmdwoption => {
 const main = async () => {
   const inputs = await collectInputs();
   if (inputs === "quit" || inputs === "q") {
-    return console.log(bold().red("------Quitting------------"));
+    return console.log(bold().green("------Quitting - Done ---------"));
   }
   const cmds = getCmdsList(inputs);
   if (cmds.length > 1) {
@@ -91,9 +91,11 @@ const main = async () => {
     const finalcmdwoption = finalcmd + " " + options;
     await runCmd(finalcmdwoption);
   } else {
-    console.log("Not valid key. Enter valid key OR");
-    console.log(" To quit enter 'quit'");
     if (loopMode) {
+      console.log(
+        bold().red("Not valid key. Enter valid key OR To quit enter 'quit'")
+      );
+
       main();
     }
   }
