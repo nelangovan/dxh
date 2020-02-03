@@ -6,13 +6,13 @@ const shell = require("shelljs");
 const { red, green, blue, cyan, bold } = require("kleur");
 const spinner = require("ora")();
 const sfcommands = require("./conf.js");
-const ts = new trieSearch(["shortcut", "command", "executor", "workspace"]);
+const ts = new trieSearch(["shortcut", "command", "workspace"]);
 ts.addAll(sfcommands.getAllCmds());
 let loopMode = false;
 const commander = require("commander");
 const program = new commander.Command();
 program
-  .version("1.1.3")
+  .version("1.1.5")
   .description("sfdx command helper")
   .option("-l, --loop", "Enable loop mode")
   .usage("[options] [shortcuts or topics]")
@@ -44,14 +44,24 @@ const getCmdsList = key => {
   const cmdsList = ts.get(key);
   return cmdsList;
 };
-const init = inputargs => {
-  inputargs.forEach(element => {
-    console.log(
-      columnify(getCmdsList(element), {
-        columns: ["shortcut", "command", "desc"]
-      })
-    );
-  });
+const displaycmds = cmds => {
+  console.log(
+    columnify(cmds, {
+      columns: ["shortcut", "workspace", "command", "desc"],
+      config: {
+        //shortcut: {},
+        workspace: { showHeaders: false },
+        command: { minWidth: 30 }
+        // desc: {}
+      }
+    })
+  );
+};
+
+const init = function(inputargs) {
+  console.log(inputargs);
+  var cmds = getCmdsList(inputargs);
+  displaycmds(cmds);
 };
 const runCmd = async (finalcmdwoption, inputs) => {
   spinner.text = "Running : " + cyan(finalcmdwoption) + "\n";
@@ -86,7 +96,7 @@ const main = async () => {
   }
   const cmds = getCmdsList(inputs);
   if (cmds.length > 1) {
-    console.log(columnify(cmds, { columns: ["shortcut", "command", "desc"] }));
+    displaycmds(cmds);
     main();
   } else if (cmds.length == 1) {
     const { shortcut, command, desc, workspace, executor } = cmds[0];
@@ -108,5 +118,8 @@ const main = async () => {
     }
   }
 };
-init(inputargs);
+if (inputargs.length > 0) {
+  init(inputargs);
+}
+
 main();

@@ -482,7 +482,7 @@ module.exports = {
         executor: "sfdx"
       },
       {
-        shortcut: "p$i$r",
+        shortcut: "p$ir",
         command: "package:install:report",
         desc: "retrieve the status of a package installation request",
         workspace: "force",
