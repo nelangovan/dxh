@@ -31,7 +31,7 @@
     "kleur": "^3.0.3",
     "ora": "^4.0.3",
     "shelljs": "^0.8.3",
-    "trie-search": "^1.2.11"
+    "trie-search": "^1.3.4"
   },
   "bugs": {
     "url": "https://github.com/nelangovan/dxh/issues"
