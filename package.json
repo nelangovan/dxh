@@ -25,7 +25,7 @@
   "author": "Elangovan Nainar",
   "license": "MIT",
   "dependencies": {
-    "columnify": "^1.5.4",
+    "columnify": "^1.6.0",
     "commander": "^4.1.0",
     "inquirer": "^7.0.3",
     "kleur": "^3.0.3",
