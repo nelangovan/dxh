@@ -27,9 +27,9 @@
   "dependencies": {
     "columnify": "^1.5.4",
     "commander": "^4.1.0",
-    "inquirer": "^7.0.3",
+    "inquirer": "^9.0.0",
     "kleur": "^3.0.3",
-    "ora": "^4.0.3",
+    "ora": "^6.0.1",
     "shelljs": "^0.8.3",
     "trie-search": "^1.2.11"
   },
